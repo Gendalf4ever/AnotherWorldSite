@@ -18,6 +18,7 @@
             min-height: 0 !important;
         }
 
+        /* Интерфейс поверх камеры */
         #ui-layer {
             position: absolute;
             top: 0; 
@@ -37,17 +38,19 @@
         }
     </style>
 </head>
-<body style="margin: 0; overflow: hidden;">
 
-    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="webgl2: false;">
+<body style="margin: 0; padding: 0; overflow: hidden; width: 100vw; height: 100vh; background-color: black;">
+
+    <a-scene arjs="sourceType: webcam; debugUIEnabled: false;" renderer="webgl2: false;">
         
         <a-assets>
             <a-asset-item id="roulette-model" src="models/wheel_of_fortune.glb"></a-asset-item>
             <a-asset-item id="character-model" src="models/character.glb"></a-asset-item>
         </a-assets>
 
-        <a-marker preset="hiro">
 
+        <a-marker preset="hiro">
+            
             <a-entity position="0 0.5 -1">
                 <a-entity id="roulette"
                           animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear">
@@ -92,9 +95,6 @@
 
         shootBtn.addEventListener('click', () => {
             shootBtn.style.display = 'none';
-
-            // document.getElementById('character').setAttribute('animation-mixer', 'clip: Shoot;');
-
             roulette.removeAttribute('animation');
 
             const randomPrize = prizes[Math.floor(Math.random() * prizes.length)];
