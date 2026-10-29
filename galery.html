@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
+
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+        <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+        </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
+                <a href="galery.html" class="text-red-500 font-bold transition-colors">Галерея</a>
+                <a href="contacts.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Контакты</a>
+                <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
+                <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
+            </nav>
+            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase text-sm red-glow">Бронь</a>
+        </div>
+    </header>
+
+
+    <section class="py-16 lg:py-24 px-6 lg:px-24 flex-grow">
+        <div class="max-w-7xl mx-auto">
+            
+
+            <h1 class="text-4xl lg:text-5xl font-extrabold mb-16 text-center uppercase text-white tracking-wide">
+               Наши <span class="text-red-500">мероприятия</span> 
+            </h1>
+            
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center mb-24">
+                
+                <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-[28rem] relative group">
+                    <video src="img/video.mov" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay loop muted playsinline></video>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 uppercase text-white tracking-wide">
+                        Праздник для <span class="text-red-500">всей семьи</span>
+                    </h2>
+                    <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                        У нас вы можете провести незабываемый день рождения! Погрузитесь в фантастические миры вместе с детьми, сразитесь в виртуальных баталиях и получите эмоции, которые останутся с вами навсегда.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-4 text-blue-50 font-medium">
+                            <div class="bg-blue-900/50 p-2 rounded-full text-red-500 flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            Игры подходят для взрослых и детей от 8 лет
+                        </li>
+                        <li class="flex items-center gap-4 text-blue-50 font-medium">
+                            <div class="bg-blue-900/50 p-2 rounded-full text-red-500 flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            Безопасное пространство без проводов
+                        </li>
+                    </ul>
+                    <a href="contacts.html" class="inline-block border-2 border-red-500 text-red-500 hover:bg-red-600 hover:text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300">
+                        Забронировать игру
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row-reverse gap-12 items-center mb-24">
+                
+                <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-[28rem] relative group">
+                    <video src="img/birthday.mov" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay loop muted playsinline></video>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 uppercase text-white tracking-wide">
+                        Отрыв с <span class="text-red-500">друзьями</span>
+                    </h2>
+                    <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                        Соберите компанию и устройте настоящий киберспортивный турнир! Переговаривайтесь по связи, прикрывайте друг другу спины и докажите, что ваша команда — лучшая.
+                    </p>
+                    <a href="games.html" class="inline-block bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300 red-glow">
+                        Смотреть игры
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full bg-[#0a1128] border border-red-800/60 rounded-3xl p-10 lg:p-14 text-center">
+                <h3 class="text-2xl lg:text-3xl font-bold mb-6 uppercase text-white tracking-wide">
+                    Любой формат <span class="text-red-500">мероприятий</span>
+                </h3>
+                <p class="text-blue-100 text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+                    Помимо дней рождения и встреч с друзьями, наши арены идеально подходят для проведения <strong>корпоративов, масштабных тимбилдингов и выпускных</strong>. Мы поможем сделать ваш праздник по-настоящему особенным!
+                </p>
+                <a href="contacts.html" class="inline-flex items-center gap-2 text-red-500 hover:text-red-300 font-bold uppercase tracking-wider transition-colors duration-300">
+                    Узнать подробности
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+<footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+        <p>© 2026 Другие Миры</p>
+    </footer>
+
+</body>
+</html>

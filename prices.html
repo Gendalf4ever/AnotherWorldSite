@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цены</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex-col owerflow-x-hidden pt-20 bg-[#1e2126]">
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+                <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-6 lg:gap-8">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
+                <a href="prices.html" class="text-red-500 font-bold transition-colors">Цены</a>
+                <a href="contacts.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Контакты</a>
+                <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
+                <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
+            </nav>
+            <button onclick="openModal()" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase tracking-wide transition-all duration-300 text-sm red-glow">
+                Бронь
+            </button>
+        </div>
+    </header>
+
+    <section class="py-16 lg:py-24 px-6 lg:px-12 flex-grow">
+        <div class="max-w-5xl mx-auto flex flex-col gap-16">
+            
+            <!-- свободная сессия -->
+            <div>
+                <h1 class="text-4xl lg:text-5xl font-extrabold mb-10 text-center uppercase text-white tracking-wider">
+                    Свободная <span class="text-red-500">сессия</span>
+                </h1>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <!-- Будни -->
+                    <div class="bg-[#0a1128] border-2 border-red-800/50 rounded-3xl p-8 text-center hover:border-red-500 transition-colors duration-300 group">
+                        <h3 class="text-xl font-medium text-white mb-6 uppercase tracking-widest">Будни:</h3>
+                        
+                        <div class="mb-6">
+                            <div class="text-6xl font-black text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.5)] leading-none mb-2 group-hover:scale-105 transition-transform">1400</div>
+                            <div class="text-gray-400 text-sm uppercase tracking-wide">Рублей / Полчаса</div>
+                        </div>
+                        
+                        <div class="w-full h-px bg-red-900/50 my-6"></div>
+                        
+                        <div>
+                            <div class="text-6xl font-black text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.5)] leading-none mb-2 group-hover:scale-105 transition-transform">2200</div>
+                            <div class="text-gray-400 text-sm uppercase tracking-wide">Рублей / Час</div>
+                        </div>
+                    </div>
+
+                    <!-- Выходные -->
+                    <div class="bg-[#0a1128] border-2 border-red-800/50 rounded-3xl p-8 text-center hover:border-red-500 transition-colors duration-300 group">
+                        <h3 class="text-xl font-medium text-white mb-6 uppercase tracking-widest">Выходные:</h3>
+                        
+                        <div class="mb-6">
+                            <div class="text-6xl font-black text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.5)] leading-none mb-2 group-hover:scale-105 transition-transform">1600</div>
+                            <div class="text-gray-400 text-sm uppercase tracking-wide">Рублей / Полчаса</div>
+                        </div>
+                        
+                        <div class="w-full h-px bg-red-900/50 my-6"></div>
+                        
+                        <div>
+                            <div class="text-6xl font-black text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.5)] leading-none mb-2 group-hover:scale-105 transition-transform">2500</div>
+                            <div class="text-gray-400 text-sm uppercase tracking-wide">Рублей / Час</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дополнительные услуги(плойка, автосим, одиночки) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- PlayStation 5 -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-2xl p-6 text-center hover:border-red-500 transition-colors duration-300 group flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-sm font-semibold text-white mb-4 uppercase h-10 flex items-center justify-center">Аренда PlayStation 5<br>на 1 игрока</h4>
+                            <div class="text-4xl font-black text-red-500 mb-2 group-hover:scale-105 transition-transform">300</div>
+                            <div class="text-gray-400 text-xs uppercase">Рублей / 1 Час</div>
+                        </div>
+                        <div class="mt-5 text-[11px] text-gray-500 leading-tight uppercase">
+                            *Временно недоступно в ТЦ Прометей
+                        </div>
+                    </div>
+                    
+                    <!-- Автосимулятор -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-2xl p-6 text-center hover:border-red-500 transition-colors duration-300 group flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-sm font-semibold text-white mb-4 uppercase h-10 flex items-center justify-center">Автосимулятор</h4>
+                            <div class="text-4xl font-black text-red-500 mb-2 group-hover:scale-105 transition-transform">500</div>
+                            <div class="text-gray-400 text-xs uppercase">Рублей / 15 минут</div>
+                        </div>
+                        <!-- Пустой блок для выравнивания высоты карточек -->
+                        <div class="mt-5 text-[11px] text-transparent leading-tight uppercase hidden md:block">
+                            *Заглушка
+                        </div>
+                    </div>
+                    
+                    <!-- Классический VR -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-2xl p-6 text-center hover:border-red-500 transition-colors duration-300 group flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-sm font-semibold text-white mb-4 uppercase h-10 flex items-center justify-center">Классический VR<br>для одиночной игры</h4>
+                            <div class="text-4xl font-black text-red-500 mb-2 group-hover:scale-105 transition-transform">850</div>
+                            <div class="text-gray-400 text-xs uppercase">Рублей / 15 минут</div>
+                        </div>
+                        <div class="mt-5 text-[11px] text-gray-500 leading-tight uppercase">
+                            *Перемещение через контроллеры, Вы стоите на месте и двигаетесь через взмахи руками или нажатие кнопок
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- пакеты -->
+            <div class="pt-8 border-t border-red-900/30">
+                <h2 class="text-4xl font-extrabold mb-10 text-center uppercase text-white tracking-wider">Мероприятия</h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- MINI -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-3xl p-6 text-center hover:border-red-500 transition-colors duration-300 group flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-4 uppercase">Mini</h3>
+                        <div class="flex justify-center gap-4 text-red-500 text-sm font-semibold mb-4">
+                            <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg> 4 человека</span>
+                            <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 2 часа</span>
+                        </div>
+                        <div class="w-full h-px bg-red-900/50 mb-4"></div>
+                        <p class="text-gray-300 text-xs uppercase mb-6 h-8 flex items-center justify-center">1 час игры<br>и 1 час стола</p>
+                        
+                        <div class="mt-auto">
+                            <div class="mb-4">
+                                <div class="text-3xl font-black text-red-500 mb-1 group-hover:scale-105 transition-transform">11 000</div>
+                                <div class="text-gray-400 text-xs uppercase">Будни</div>
+                            </div>
+                            <div class="w-full h-px bg-red-900/30 my-3 w-1/2 mx-auto"></div>
+                            <div>
+                                <div class="text-3xl font-black text-red-500 mb-1 group-hover:scale-105 transition-transform">13 000</div>
+                                <div class="text-gray-400 text-xs uppercase">Выходные</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STANDART -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-3xl p-6 text-center hover:border-red-500 transition-colors duration-300 group flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-4 uppercase">Standart</h3>
+                        <div class="flex justify-center gap-4 text-red-500 text-sm font-semibold mb-4">
+                            <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg> 8 человек</span>
+                            <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 2 часа</span>
+                        </div>
+                        <div class="w-full h-px bg-red-900/50 mb-4"></div>
+                        <p class="text-gray-300 text-xs uppercase mb-6 h-8 flex items-center justify-center">Без ограничения<br>сессии или стола</p>
+                        
+                        <div class="mt-auto">
+                            <div class="mb-4">
+                                <div class="text-3xl font-black text-red-500 mb-1 group-hover:scale-105 transition-transform">23 000</div>
+                                <div class="text-gray-400 text-xs uppercase">Будни</div>
+                            </div>
+                            <div class="w-full h-px bg-red-900/30 my-3 w-1/2 mx-auto"></div>
+                            <div>
+                                <div class="text-3xl font-black text-red-500 mb-1 group-hover:scale-105 transition-transform">29 000</div>
+                                <div class="text-gray-400 text-xs uppercase">Выходные</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HARD -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-3xl p-6 text-center hover:border-red-500 transition-colors duration-300 group flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4 uppercase">Hard</h3>
+                            <div class="flex justify-center gap-4 text-red-500 text-sm font-semibold mb-6">
+                                <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg> 12 человек</span>
+                                <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 3 часа</span>
+                            </div>                       
+                            <div class="w-full h-px bg-red-900/50 mb-8"></div>
+                            <p class="text-gray-300 text-xs uppercase mb-6 h-8 flex items-center justify-center">В данный пакет входит PlayStation 5</p>
+                        
+                        </div>
+                        
+                        <div>
+                            <div class="mb-6">
+                                <div class="text-4xl font-black text-red-500 mb-1 group-hover:scale-105 transition-transform">35 000</div>
+                                <div class="text-gray-400 text-xs uppercase">Будни</div>
+                            </div>
+                            <div class="w-full h-px bg-red-900/30 my-4 w-1/2 mx-auto"></div>
+                            <div class="mt-6">
+                                <div class="text-4xl font-black text-red-500 mb-1 group-hover:scale-105 transition-transform">45 000</div>
+                                <div class="text-gray-400 text-xs uppercase">Выходные</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIP -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-3xl p-6 text-center hover:border-red-500 transition-colors duration-300 group flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4 uppercase">VIP</h3>
+                            <div class="flex justify-center gap-4 text-red-500 text-sm font-semibold mb-6">
+                                <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg> 16 человек</span>
+                                <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 4 часа</span>
+                            </div>
+                            <div class="w-full h-px bg-red-900/50 mb-8"></div>
+
+                            <p class="text-gray-300 text-xs uppercase mb-6 h-8 flex items-center justify-center">В данный пакет входит PlayStation 5 и одиночные игры</p>
+                        </div>
+                        
+                        <div>
+                            <div class="mb-6">
+                                <div class="text-4xl font-black text-red-500 mb-1 group-hover:scale-105 transition-transform">45 000</div>
+                                <div class="text-gray-400 text-xs uppercase">Будни</div>
+                            </div>
+                            <div class="w-full h-px bg-red-900/30 my-4 w-1/2 mx-auto"></div>
+                            <div class="mt-6">
+                                <div class="text-4xl font-black text-red-500 mb-1 group-hover:scale-105 transition-transform">55 000</div>
+                                <div class="text-gray-400 text-xs uppercase">Выходные</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--  игра для компани -->
+            <div class="pt-8 border-t border-red-900/30">
+                <h2 class="text-3xl font-extrabold mb-8 text-center uppercase text-white tracking-wider">Игра для компании</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-8">
+                    <!-- До 5 человек -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-2xl p-6 text-center hover:border-red-500 transition-colors duration-300 group">
+                        <div class="flex items-center justify-center gap-3 text-white font-medium mb-4 uppercase">
+                            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                            Компания до 5 человек
+                        </div>
+                        <div class="w-full h-px bg-red-900/50 mb-4 w-3/4 mx-auto"></div>
+                        <div class="text-5xl font-black text-red-500 group-hover:scale-105 transition-transform">10 000</div>
+                    </div>
+
+                    <!-- До 8 человек -->
+                    <div class="bg-[#0a1128] border border-red-800/50 rounded-2xl p-6 text-center hover:border-red-500 transition-colors duration-300 group">
+                        <div class="flex items-center justify-center gap-3 text-white font-medium mb-4 uppercase">
+                            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                            Компания до 8 человек
+                        </div>
+                        <div class="w-full h-px bg-red-900/50 mb-4 w-3/4 mx-auto"></div>
+                        <div class="text-5xl font-black text-red-500 group-hover:scale-105 transition-transform">18 000</div>
+                    </div>
+                </div>
+
+                <div class="text-center text-gray-400 text-sm">
+                    ★ Калибровка до 15 минут входит в время сессии* ★
+                </div>
+            </div>
+
+            <!-- КНОПКА ВНИЗУ -->
+            <div class="flex justify-center mt-4">
+                <button onclick="openModal()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-5 px-12 rounded-xl text-lg uppercase tracking-wider transition-all duration-300 red-glow transform hover:-translate-y-1 w-full md:w-auto">
+                    Забронировать игру
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- подвал -->
+    <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+        <p>© 2026 Другие Миры</p>
+    </footer>
+
+    <!-- Оверлей модального окна бронирования -->
+    <div id="arenaModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center opacity-0 invisible transition-all duration-300" onclick="handleOutsideClick(event)">
+        <div class="bg-[#0a1128] border border-blue-900/50 w-full max-w-md m-4 p-8 rounded-3xl shadow-2xl transform translate-y-8 transition-transform duration-300 relative" onclick="event.stopPropagation()">
+            
+            <div id="stepSelectArena">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-bold text-white uppercase tracking-wide">Выберите арену</h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-red-500 text-3xl leading-none transition-colors">&times;</button>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <div onclick="selectArena('ТРЦ Пик (ул. Ефимова, 2)')" class="p-4 bg-[#1e2126] border border-blue-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                        <div>
+                            <span class="block font-bold text-white">ТРЦ Пик</span>
+                            <span class="block text-sm text-gray-400">м. Сенная / Садовая</span>
+                        </div>
+                        <span class="text-gray-500 group-hover:text-red-500 transform group-hover:translate-x-1 transition-all">→</span>
+                    </div>
+                    <div onclick="selectArena('ТЦ Июнь (пр. Индустриальный, 24)')" class="p-4 bg-[#1e2126] border border-blue-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                        <div>
+                            <span class="block font-bold text-white">ТЦ Июнь</span>
+                            <span class="block text-sm text-gray-400">м. Ладожская</span>
+                        </div>
+                        <span class="text-gray-500 group-hover:text-red-500 transform group-hover:translate-x-1 transition-all">→</span>
+                    </div>
+                    <div onclick="selectArena('ТЦ Прометей (пр. Просвещения, 80 к1)')" class="p-4 bg-[#1e2126] border border-blue-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                        <div>
+                            <span class="block font-bold text-white">ТЦ Прометей</span>
+                            <span class="block text-sm text-gray-400">м. Гражданский пр.</span>
+                        </div>
+                        <span class="text-gray-500 group-hover:text-red-500 transform group-hover:translate-x-1 transition-all">→</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="stepBookingForm" style="display: none;">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="selectedArenaTitle" class="text-lg font-bold text-white uppercase tracking-wide leading-tight">Оформление брони</h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-red-500 text-3xl leading-none transition-colors">&times;</button>
+                </div>
+
+                <form id="bookingForm" onsubmit="submitBooking(event)" class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-medium text-gray-400">Ваше имя</label>
+                        <input type="text" id="clientName" required placeholder="Иван" class="p-3 bg-[#1e2126] border border-blue-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-medium text-gray-400">Телефон</label>
+                        <input type="tel" id="clientPhone" required placeholder="+7 (999) 000-00-00" maxlength="18" class="p-3 bg-[#1e2126] border border-blue-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-medium text-gray-400">Email (для подтверждения)</label>
+                        <input type="email" id="clientEmail" required placeholder="example@mail.ru" class="p-3 bg-[#1e2126] border border-blue-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-medium text-gray-400">Желаемая игра (необязательно)</label>
+                        <select id="clientGame" class="p-3 bg-[#1e2126] border border-blue-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors appearance-none">
+                            <option value="">Не выбрано (выберем на месте)</option>
+                            <option value="KERNEL">KERNEL (VR-шутер)</option>
+                            <option value="Шмутер">Шмутер (Low-Poly VR-шутер)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl uppercase tracking-wide mt-2 transition-colors red-glow">Отправить заявку</button>
+                    <button type="button" onclick="backToArenas()" class="w-full py-2 text-sm text-gray-400 hover:text-white transition-colors">← Назад к выбору арены</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){ emailjs.init({ publicKey: "q1NpAKXRSeyrUn5LB", }); })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игры </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
+           <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+            <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-red-500 font-bold transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
+                <a href="contacts.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Контакты</a>
+                <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
+                <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
+                <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
+            </nav>
+            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase tracking-wide transition-all duration-300 text-sm red-glow">Бронь</a>
+        </div>
+    </header>
+
+    <section class="py-16 lg:py-24 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12 overflow-hidden">
+            <div class="w-full max-w-4xl">
+                <h1 class="text-4xl lg:text-5xl font-extrabold mb-6 uppercase text-white tracking-wide">
+                     <span class="text-red-500">KERNEL</span>
+                </h1>
+                <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                    Реалистичный VR-шутер для компании от 2 до 10 человек. Разделитесь на команды и устройте масштабную перестрелку в заброшенном бункере. Полное погружение гарантировано!
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-blue-900/50 p-2 rounded-full text-red-500 flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Командные сражения друг против друга (PvP)
+                    </li>
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-blue-900/50 p-2 rounded-full text-red-500 flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Реалистичная ручная перезарядка оружия
+                    </li>
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-blue-900/50 p-2 rounded-full text-red-500 flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Уровни сложности: от новичка до хардкора
+                    </li>
+                </ul>
+            </div>
+
+            <!-- галерея -->
+            <div class="w-full h-[28rem] lg:h-[36rem] overflow-x-auto overflow-y-visible py-8 scrollbar-hide relative">
+                <div class="flex gap-4 lg:gap-6 h-full items-center min-w-max px-4">
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform -translate-y-6 flex-shrink-0"><img src="img/kernel/1.png" class="w-full h-full object-cover"></div>
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform translate-y-6 flex-shrink-0"><img src="img/kernel/2.png" class="w-full h-full object-cover"></div>
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform -translate-y-10 flex-shrink-0"><img src="img/kernel/3.png" class="w-full h-full object-cover"></div>
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform translate-y-2 flex-shrink-0"><img src="img/kernel/4.png" class="w-full h-full object-cover"></div>
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform -translate-y-4 flex-shrink-0"><img src="img/kernel/5.png" class="w-full h-full object-cover"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 lg:py-24 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12 overflow-hidden">
+            <div class="w-full max-w-4xl">
+                <h1 class="text-4xl lg:text-5xl font-extrabold mb-6 uppercase text-white tracking-wide">
+                     <span class="text-red-500">Шмутер</span>
+                </h1>
+                <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                    Low-Poly VR-шутер для компании от 2 до 10 человек. Разделитесь на команды и устройте масштабную перестрелку друг протв друга или против босса. можно захватывать точки, просто стрелять.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-blue-900/50 p-2 rounded-full text-red-500 flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Командные сражения друг против друга (PvP)
+                    </li>
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-blue-900/50 p-2 rounded-full text-red-500 flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                       Интуитивно понятное управление
+                    </li>
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-blue-900/50 p-2 rounded-full text-red-500 flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Уровни сложности: от новичка до хардкора
+                    </li>
+                </ul>
+            </div>
+
+            <!-- галерея -->
+            <div class="w-full h-[28rem] lg:h-[36rem] overflow-x-auto overflow-y-visible py-8 scrollbar-hide relative">
+                <div class="flex gap-4 lg:gap-6 h-full items-center min-w-max px-4">
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform -translate-y-6 flex-shrink-0"><img src="img/shmooter/1.png" class="w-full h-full object-cover"></div>
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform translate-y-6 flex-shrink-0"><img src="img/shmooter/2.png" class="w-full h-full object-cover"></div>
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform -translate-y-10 flex-shrink-0"><img src="img/shmooter/3.png" class="w-full h-full object-cover"></div>
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform translate-y-2 flex-shrink-0"><img src="img/shmooter/4.png" class="w-full h-full object-cover"></div>
+                    <div class="w-48 lg:w-56 h-[80%] rounded-[3rem] overflow-hidden border-2 border-red-500/60 border-glow transform -translate-y-4 flex-shrink-0"><img src="img/shmooter/5.png" class="w-full h-full object-cover"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+        <p>© 2026 Другие Миры</p>
+    </footer>
+</body>
+</html>

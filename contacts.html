@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
+
+    <!-- шапка -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+                <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
+                <a href="contacts.html" class="text-red-500 font-bold transition-colors">Контакты</a>
+                <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
+                      <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
+            </nav>
+            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase text-sm red-glow transition-all">Бронь</a>
+        </div>
+    </header>
+
+    <section class="py-20 lg:py-24 px-6 lg:px-12 flex-grow flex flex-col justify-center">
+        <div class="max-w-7xl mx-auto w-full bg-[#0a1128] border border-red-800/60 rounded-3xl p-10 lg:p-16 text-center">
+            
+            <h1 class="text-4xl font-extrabold mb-4 uppercase text-white tracking-wide">
+                Готовы к <span class="text-red-500">игре?</span>
+            </h1>
+            <p class="text-blue-100 text-lg mb-12">Выберите удобную арену, берите друзей и приходите к нам за новыми эмоциями!</p>
+            
+            <!-- карточки локаций -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-left">
+                
+                <!-- локация 1 -->
+                <div class="bg-[#1e2126] border border-red-800/50 rounded-2xl p-6 flex flex-col h-full hover:border-red-500 transition-colors duration-300 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-red-900/50 p-3 rounded-xl text-red-500 border border-red-800/50 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-red-100 text-xs uppercase tracking-widest font-semibold mb-1">Метро Гражданский пр.</h3>
+                            <p class="text-white text-base font-bold">пр. Просвещения 80к1, 2 этаж</p>
+                            <p class="text-white text-base font-bold">+ 7 (931)-008-05-07</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-56 rounded-xl overflow-hidden border border-red-900/50 mt-auto">
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=30.407183%2C60.038947&mode=search&oid=122584168699&ol=biz&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+                    </div>
+                </div>
+
+                <!-- локация 2 -->
+                <div class="bg-[#1e2126] border border-red-800/50 rounded-2xl p-6 flex flex-col h-full hover:border-red-500 transition-colors duration-300 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-red-900/50 p-3 rounded-xl text-red-500 border border-red-800/50 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-blue-100 text-xs uppercase tracking-widest font-semibold mb-1">Метро Сенная / Спасская / Садовая</h3>
+                            <p class="text-white text-base font-bold">Ул. Ефимова 2, 3 этаж</p>
+                            <p class="text-white text-base font-bold">+ 7 (931)-247-08-06</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-56 rounded-xl overflow-hidden border border-red-900/50 mt-auto">
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=30.320485%2C59.926124&mode=search&oid=179818159662&ol=biz&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+                    </div>
+                </div>
+
+                <!-- локация 3 -->
+                <div class="bg-[#1e2126] border border-red-800/50 rounded-2xl p-6 flex flex-col h-full hover:border-red-500 transition-colors duration-300 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-red-900/50 p-3 rounded-xl text-red-500 border border-red-800/50 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-blue-100 text-xs uppercase tracking-widest font-semibold mb-1">Метро Ладожская</h3>
+                            <p class="text-white text-base font-bold">Индустриальный пр 24, 2 этаж</p>
+                            <p class="text-white text-base font-bold">+ 7 (931)-008-08-06</p>
+                        </div>
+                    </div>
+                    <!--  яндекс Карта -->
+                    <div class="w-full h-56 rounded-xl overflow-hidden border border-red-900/50 mt-auto">
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=30.473981%2C59.946175&mode=search&oid=83921762882&ol=biz&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <button onclick="openModal()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-5 px-12 rounded-xl text-lg uppercase tracking-wider transition-all duration-300 red-glow transform hover:-translate-y-1 w-full md:w-auto mt-6">
+                Забронировать игру
+            </button>
+            
+        </div>
+    </section>
+
+    <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+        <p>© 2026 Другие Миры</p>
+    </footer>
+    <!-- Оверлей модального окна -->
+    <div id="arenaModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center" onclick="handleOutsideClick(event)">
+        <!-- Карточка модалки -->
+        <div class="bg-[#0a1128] border border-red-900/50 w-full max-w-md m-4 p-8 rounded-3xl shadow-2xl transform translate-y-8 transition-transform duration-300 relative" onclick="event.stopPropagation()">
+            
+            <!--  Выбор арены -->
+            <div id="stepSelectArena">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-bold text-white uppercase tracking-wide">Выберите арену</h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-red-500 text-3xl leading-none transition-colors">&times;</button>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <!-- пик -->
+                    <div onclick="selectArena('ТРЦ Пик (ул. Ефимова, 2)')" class="p-4 bg-[#1e2126] border border-red-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                        <div>
+                            <span class="block font-bold text-white">ТРЦ Пик</span>
+                            <span class="block text-sm text-gray-400">м. Сенная / Садовая</span>
+                        </div>
+                        <span class="text-gray-500 group-hover:text-red-500 transform group-hover:translate-x-1 transition-all">→</span>
+                    </div>
+
+                    <!-- малина молл -->
+                    <div onclick="selectArena('ТЦ Июнь (пр. Индустриальный, 24)')" class="p-4 bg-[#1e2126] border border-red-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                        <div>
+                            <span class="block font-bold text-white">ТЦ Июнь</span>
+                            <span class="block text-sm text-gray-400">м. Ладожская</span>
+                        </div>
+                        <span class="text-gray-500 group-hover:text-red-500 transform group-hover:translate-x-1 transition-all">→</span>
+                    </div>
+
+                    <!-- прометей -->
+                    <div onclick="selectArena('ТЦ Прометей (пр. Просвещения, 80 к1)')" class="p-4 bg-[#1e2126] border border-red-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                        <div>
+                            <span class="block font-bold text-white">ТЦ Прометей</span>
+                            <span class="block text-sm text-gray-400">м. Гражданский пр.</span>
+                        </div>
+                        <span class="text-gray-500 group-hover:text-red-500 transform group-hover:translate-x-1 transition-all">→</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- форма заявки -->
+            <div id="stepBookingForm" style="display: none;">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="selectedArenaTitle" class="text-lg font-bold text-white uppercase tracking-wide leading-tight">Оформление брони</h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-red-500 text-3xl leading-none transition-colors">&times;</button>
+                </div>
+
+                <form id="bookingForm" onsubmit="submitBooking(event)" class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-medium text-gray-400">Ваше имя</label>
+                        <input type="text" id="clientName" required placeholder="Иван" class="p-3 bg-[#1e2126] border border-red-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-medium text-gray-400">Телефон</label>
+                        <input type="tel" id="clientPhone" required placeholder="+7 (999) 000-00-00" maxlength="18" class="p-3 bg-[#1e2126] border border-red-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-medium text-gray-400">Email (для подтверждения)</label>
+                        <input type="email" id="clientEmail" required placeholder="example@mail.ru" class="p-3 bg-[#1e2126] border border-red-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-medium text-gray-400">Желаемая игра (необязательно)</label>
+                        <select id="clientGame" class="p-3 bg-[#1e2126] border border-red-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors appearance-none">
+                            <option value="">Не выбрано (выберем на месте)</option>
+                            <option value="KERNEL">KERNEL (VR-шутер)</option>
+                            <option value="Шмутер">Шмутер (Low-Poly VR-шутер)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl uppercase tracking-wide mt-2 transition-colors red-glow">Отправить заявку</button>
+                    <button type="button" onclick="backToArenas()" class="w-full py-2 text-sm text-gray-400 hover:text-white transition-colors">← Назад к выбору арены</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "q1NpAKXRSeyrUn5LB", 
+          });
+       })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

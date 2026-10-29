@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Игры в виртуальной реальности</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
+
+    <!-- ВЕРХНЕЕ МЕНЮ -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+                <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-red-500 font-bold transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
+                <a href="contacts.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Контакты</a>
+                <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
+                <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
+                <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
+                <!-- <a href="events.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Ближайшие мероприятия</a>-->  
+            </nav>
+            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase tracking-wide transition-all duration-300 text-sm red-glow">
+                Забронировать
+            </a>
+        </div>
+    </header>
+
+
+    <main class="relative flex-grow pb-20 pt-10 lg:pt-16 px-6 lg:px-24 min-h-[90vh] flex flex-col justify-center overflow-hidden">
+        
+        <div class="absolute inset-0 z-0">
+
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+                <img src="img/background1.jpg" alt="Фон 1" class="w-full h-full object-cover brightness-125">
+            </div>
+            
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                <img src="img/background2.jpg" alt="Фон 2" class="w-full h-full object-cover brightness-125">
+            </div>
+            
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                <img src="img/background3.jpg" alt="Фон 3" class="w-full h-full object-cover brightness-125">
+            </div>
+
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                <img src="img/background4.jpg" alt="Фон 4" class="w-full h-full object-cover brightness-125">
+            </div>
+            
+            <div class="absolute inset-0 bg-gradient-to-r from-[#1e2126]/80 via-[#1e2126]/30 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full relative z-10">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 uppercase text-white">
+                    Шагни в <br><span class="text-red-500">другую реальность!</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-gray-300 mb-10 max-w-lg leading-relaxed font-medium">
+                    Командные VR-шутеры со свободным перемещением. Собирай друзей, выбирай оружие и станьте героями любимой игры!
+                </p>
+                <a href="games.html" class="inline-block bg-red-600 hover:bg-red-500 text-white font-bold py-4 px-10 rounded-xl uppercase tracking-wider transition-all duration-300 red-glow transform hover:-translate-y-1 mr-4 mb-4">
+                    Выбрать игру
+                </a>
+            </div>
+            
+            <div class="hidden lg:flex absolute left-0 top-[45%] items-center opacity-70">
+                <div class="w-32 h-px bg-red-600"></div>
+                <div class="w-16 h-px bg-red-600 transform rotate-45 origin-left"></div>
+            </div>
+        </div>
+    </main>
+
+    <!--Что такое VR арена -->
+    <section class="py-16 lg:py-24 px-6 lg:px-24 bg-[#1e2126]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-96">
+
+                <img src="img/vr-arena.jpeg" alt="Что такое VR арена" class="w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 uppercase text-white tracking-wide">
+                    Что такое <span class="text-red-500">VR-арена?</span>
+                </h2>
+                <p class="text-blue-100 text-lg leading-relaxed mb-4">
+                    Это огромное игровое пространство (Free Roam), где вы ходите собственными ногами, а не управляете персонажем с помощью джойстика на диване. Забудьте о проводах и ограничениях!
+                </p>
+                <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                    Вам не нужно быть геймером. Вы надеваете легкий шлем, берете в руки контроллеры-оружие, и каждое ваше реальное движение переносится в игру. Прячьтесь за виртуальными укрытиями, переговаривайтесь с друзьями и выживайте вместе. 
+                </p>
+                <a href="arenas.html" class="inline-block border-2 border-red-500 text-red-500 hover:bg-red-600 hover:text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300">
+                    Посмотреть арены
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+        <p>© 2026 Другие Миры</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+
+            if (slides.length > 0) {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('opacity-100');
+                    slides[currentSlide].classList.add('opacity-0');
+                    currentSlide = (currentSlide + 1) % slides.length;
+
+                    slides[currentSlide].classList.remove('opacity-0');
+                    slides[currentSlide].classList.add('opacity-100');
+                }, 4000); 
+            }
+        });
+    </script>
+</body>
+</html>

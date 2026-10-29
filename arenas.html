@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арены и Отдых | Другие Миры</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
+
+    <!-- ШАПКА -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+                <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-red-500 font-bold transition-colors">Арены</a>
+                <a href="contacts.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Контакты</a>
+                <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
+                <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
+                <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
+            </nav>
+            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase text-sm red-glow transition-all">Бронь</a>
+        </div>
+    </header>
+
+    <section class="py-16 lg:py-24 px-6 lg:px-24 flex-grow">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- главный заголовок -->
+            <h1 class="text-4xl lg:text-5xl font-extrabold mb-16 text-center uppercase text-white tracking-wide">Играй и <span class="text-red-500">отдыхай</span></h1>
+            
+            <!--  зона отдыха -->
+            <div class="flex flex-col lg:flex-row-reverse gap-16 items-center mb-32">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 uppercase text-white tracking-wide">
+                        Уютные <span class="text-red-500">зоны отдыха</span>
+                    </h2>
+                    <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                        У нас можно не только круто поиграть, но и отметить день рождения, праздник или просто посидеть с друзьями после напряженного VR-матча.
+                    </p> 
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 text-blue-50 font-medium">
+                            <div class="bg-blue-900/50 p-2 rounded-full text-red-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                            Большие столы и комфортные диваны
+                        </li>
+                        <li class="flex items-center gap-4 text-blue-50 font-medium">
+                            <div class="bg-blue-900/50 p-2 rounded-full text-red-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                            Можно приносить свою пиццу, напитки и торт!
+                        </li>
+                        <li class="flex items-center gap-4 text-blue-50 font-medium">
+                            <div class="bg-blue-900/50 p-2 rounded-full text-red-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                            Вместимость до 20 человек для больших компаний
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:w-1/2 w-full">
+                    <div class="w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-96 relative">
+                        <img src="img/zone.jpg" alt="Зона отдыха" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 bg-[#1e2126]/80 backdrop-blur-md border border-red-800 px-6 py-3 rounded-2xl">
+                            <p class="text-red-500 font-bold uppercase text-sm tracking-wider">Лучшее место для праздника</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-red-900/50 to-transparent mb-24"></div>
+
+            <!-- описание арен -->
+            <h2 class="text-3xl lg:text-4xl font-extrabold mb-16 text-center uppercase text-white tracking-wide">Наши <span class="text-red-500">Локации</span></h2>
+
+            <div class="flex flex-col gap-24">
+                
+                <!-- прометей -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-64 lg:h-80 relative group">
+                        <img src="img/prometey.jpeg" alt="ТЦ Прометей" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h3 class="text-2xl lg:text-3xl font-bold mb-4 uppercase text-white tracking-wide">
+                            ТЦ Прометей
+                        </h3>
+                        <p class="text-red-500 font-semibold mb-6 uppercase tracking-wider text-sm">📍 м. Гражданский проспект (пр. Просвещения, 80к1)</p>
+                        <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                            Камерная атмосфера на севере города для Вашего отдыха и развлечения! Хорошо проведите время!
+                        </p>
+                        <a href="contacts.html" class="inline-block bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300 red-glow">
+                            Забронировать арену
+                        </a>
+                    </div>
+                </div>
+
+                <!-- пик -->
+                <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                    <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-64 lg:h-80 relative group">
+                        <img src="img/pik.jpeg" alt="ТРЦ Пик" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h3 class="text-2xl lg:text-3xl font-bold mb-4 uppercase text-white tracking-wide">
+                            ТРЦ Пик
+                        </h3>
+                        <p class="text-red-500 font-semibold mb-6 uppercase tracking-wider text-sm">📍 м. Сенная / Садовая (Ул. Ефимова, 2)</p>
+                        <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                            Наша центральная локация! Идеальное расположение прямо в сердце Санкт-Петербурга, в минуте от метро. Сюда удобно добираться из любого района города. Отличный вариант, чтобы заскочить на игру после работы с коллегами или собрать друзей на выходных.
+                        </p>
+                        <a href="contacts.html" class="inline-block bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300 red-glow">
+                            Забронировать арену
+                        </a>
+                    </div>
+                </div>
+
+                <!-- малина молл-->
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-64 lg:h-80 relative group">
+                        <img src="img/malina-moll.jpg" alt="ТЦ Июнь" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h3 class="text-2xl lg:text-3xl font-bold mb-4 uppercase text-white tracking-wide">
+                            ТЦ Малина Молл(бывш. Июнь)
+                        </h3>
+                        <p class="text-red-500 font-semibold mb-6 uppercase tracking-wider text-sm">📍 м. Ладожская (Индустриальный пр., 24)</p>
+                        <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                            Современная площадка, вмещающая до 40 человек! Просторная зона отдыха, 5 арен вмещающих до 8 человек каждая. Идеально для Корпоративов и больших киберспортивных мероприятий
+                        </p>
+                        <a href="contacts.html" class="inline-block bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300 red-glow">
+                            Забронировать арену
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- подвал -->
+    <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+        <p>© 2026 Другие Миры</p>
+    </footer>
+
+</body>
+</html>

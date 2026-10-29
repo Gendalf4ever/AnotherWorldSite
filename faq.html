@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Частые вопросы</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <style>
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+                <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
+                <a href="contacts.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Контакты</a>
+                <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
+                <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
+                <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
+            </nav>
+            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase tracking-wide transition-all duration-300 text-sm red-glow">
+                Бронь
+            </a>
+        </div>
+    </header>
+
+    <!-- вопросы -->
+    <main class="flex-grow py-16 lg:py-24 px-6 lg:px-24 relative z-10">
+        <div class="max-w-4xl mx-auto flex flex-col gap-10">
+            
+            <div class="text-center mb-6">
+                <h1 class="text-4xl lg:text-5xl font-extrabold mb-4 uppercase text-white tracking-wide">
+                    Часто задаваемые <span class="text-red-500">вопросы</span>
+                </h1>
+                <p class="text-blue-100 text-lg leading-relaxed">
+                    Отвечаем на самые популярные вопросы о наших играх и форматах проведения мероприятий.
+                </p>
+            </div>
+
+            <!-- список вопросов -->
+            <div class="space-y-4">
+                
+                
+                <details class="group bg-blue-900/10 border border-red-900/30 rounded-2xl open:border-red-500/50 open:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer p-6 text-white hover:text-red-400 transition-colors text-lg">
+                        <span>Можно ли докупать шлема в мероприятие? Если мы хотим взять тариф «Стандарт», но нас девять?</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-red-500 flex-shrink-0 ml-4">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-blue-100 p-6 pt-0 leading-relaxed text-base border-t border-red-900/20 mt-2">
+                        Нет, нельзя, так как в тариф «Стандарт» идёт одна арена, а она вмещает ровно восемь человек. Если вас больше, рекомендуем рассмотреть тарифы с арендой двух арен. если это MINI, то докупается на час, если это HARD докупается на 3 часа. Берется оплата по тарифу дня, выходной или будний день. 
+                    </div>
+                </details>
+
+
+                <details class="group bg-blue-900/10 border border-red-900/30 rounded-2xl open:border-red-500/50 open:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer p-6 text-white hover:text-red-400 transition-colors text-lg">
+                        <span>С какого возраста можно играть на VR-арене?</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-red-500 flex-shrink-0 ml-4">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-blue-100 p-6 pt-0 leading-relaxed text-base border-t border-red-900/20 mt-2">
+                       Играть можно с шести лет
+                    </div>
+                </details>
+
+                <details class="group bg-blue-900/10 border border-red-900/30 rounded-2xl open:border-red-500/50 open:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer p-6 text-white hover:text-red-400 transition-colors text-lg">
+                        <span>Можно ли взять тариф "Компания до 5" или тариф "Компания до 8" и доплатить</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-red-500 flex-shrink-0 ml-4">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-blue-100 p-6 pt-0 leading-relaxed text-base border-t border-red-900/20 mt-2">
+                       Нет, к сожалению так сделать нельзя. Если тариф "Компания до 5", а пришло 6 человек, то не получится доплатить за одного человека, 
+                    </div>
+                </details>
+                <!-- ШАБЛОН ДЛЯ ВОПРОСОВ -->
+                <!--
+                <details class="group bg-blue-900/10 border border-red-900/30 rounded-2xl open:border-red-500/50 open:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all duration-300">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer p-6 text-white hover:text-red-400 transition-colors text-lg">
+                        <span>С какого возраста можно играть на VR-арене?</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-red-500 flex-shrink-0 ml-4">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-blue-100 p-6 pt-0 leading-relaxed text-base border-t border-red-900/20 mt-2">
+                        Здесь ваш ответ на второй вопрос...
+                    </div>
+                </details>
+                -->
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+        <p>© 2026 Другие Миры</p>
+    </footer>
+
+</body>
+</html>

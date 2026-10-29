@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акции и Ивенты </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
+
+    <!-- шапка -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
+                <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+                <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+                </a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
+                <a href="events.html" class="text-red-500 font-bold transition-colors">Акции</a>
+                <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
+                <a href="contacts.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Контакты</a>
+                <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
+                <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
+            </nav>
+            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase text-sm red-glow">Бронь</a>
+        </div>
+    </header>
+
+
+    <section class="py-16 lg:py-24 px-6 lg:px-24 flex-grow">
+        <div class="max-w-7xl mx-auto">
+            
+            <h1 class="text-4xl lg:text-5xl font-extrabold mb-16 text-center uppercase text-white tracking-wide">
+                Специальные <span class="text-red-500">Предложения</span>
+            </h1>
+
+            <!-- контейнер, куда скрипт будет загружать акции -->
+            <div id="events-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            </div>
+
+            <!-- сообщение, если акций нет -->
+            <div id="no-events-msg" class="hidden text-center text-blue-100 text-lg py-10">
+                Сейчас нет активных акций. Следите за обновлениями!
+            </div>
+
+        </div>
+    </section>
+
+    <!-- подвал -->
+    <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+        <p>© 2026 Другие миры</p>
+    </footer>
+
+    <!-- Скрипт загрузки акций -->
+    <script>
+        // Функция для загрузки данных из JSON файла
+        async function loadEvents() {
+            try {
+                const response = await fetch('events.json?' + new Date().getTime());
+                const events = await response.json();
+                
+                const container = document.getElementById('events-container');
+                const noEventsMsg = document.getElementById('no-events-msg');
+
+                if (events.length === 0) {
+                    noEventsMsg.classList.remove('hidden');
+                    return;
+                }
+
+                events.forEach(event => {
+                    const card = document.createElement('div');
+                    card.className = "bg-[#0a1128] border border-red-800/60 rounded-3xl overflow-hidden flex flex-col h-full hover:border-red-500 transition-colors duration-300 group";
+                    
+                    card.innerHTML = `
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="${event.image}" alt="${event.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-lg">
+                                ${event.tag}
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <p class="text-red-500 text-sm font-semibold mb-2">${event.date}</p>
+                            <h3 class="text-2xl font-bold text-white mb-4 uppercase tracking-wide">${event.title}</h3>
+                            <p class="text-blue-100 leading-relaxed mb-8 flex-grow">${event.description}</p>
+                            <a href="contacts.html" class="inline-block text-center border border-red-500 text-red-500 hover:bg-red-600 hover:text-white font-bold py-3 px-6 rounded-xl uppercase tracking-wider transition-all duration-300">
+                                Узнать подробности
+                            </a>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Ошибка загрузки акций:', error);
+                document.getElementById('no-events-msg').classList.remove('hidden');
+                document.getElementById('no-events-msg').innerText = 'Не удалось загрузить акции.';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', loadEvents);
+    </script>
+
+</body>
+</html>

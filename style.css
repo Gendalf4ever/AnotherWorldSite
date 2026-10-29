@@ -1,0 +1,39 @@
+/* Базовые стили для всего сайта */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1e2126; /* Графитовый цвет фона */
+    color: #ffffff;
+}
+
+
+/* Эффект красного неонового свечения для кнопок призыва к действию (CTA) */
+.red-glow {
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
+}
+
+/* Эффект красного неонового свечения для рамок вокруг фотографий */
+.border-glow {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+/* Классы для скрытия стандартной полосы прокрутки в галерее игр */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; 
+}
+.scrollbar-hide {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;    
+}
+/* Анимация модального окна */
+#arenaModal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#arenaModal.active {
+    opacity: 1;
+    visibility: visible;
+}
+#arenaModal.active > div {
+    transform: translateY(0);
+}
