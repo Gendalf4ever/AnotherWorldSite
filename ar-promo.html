@@ -39,25 +39,41 @@
              vr-mode-ui="enabled: false" 
              device-orientation-permission-ui="enabled: false">
         
-        <a-assets>
-            <a-asset-item id="roulette-model" src="models/wheel.glb"></a-asset-item>
-             <a-asset-item id="character-model" src="models/character.glb"></a-asset-item> 
-        </a-assets>
-
+        
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <a-entity mindar-image-target="targetIndex: 0">
-    
-    <!-- ТЕСТОВЫЙ КУБ -->
-    <!--<a-box position="0 0 0" scale="0.5 0.5 0.5" color="red"></a-box>-->
+     
+        <a-entity mindar-image-target="targetIndex: 0">
+            
+            
+            <a-entity position="0 0.3 0" scale="0.9 0.9 0.9">
+                
+               
+                <a-cylinder color="#1f2937" radius="0.05" height="1.2" position="0 -0.5 -0.1"></a-cylinder>
+                
+                
+                <a-triangle color="#ef4444" vertex-a="0 0.1 0" vertex-b="-0.08 -0.1 0" vertex-c="0.08 -0.1 0" position="0 0.55 0.05" rotation="0 0 180"></a-triangle>
 
-    <a-entity position="0 0 0">
-        <a-entity id="roulette">
-            <a-entity gltf-model="#roulette-model" position="0 0 0" scale="0.3 0.3 0.3"></a-entity>
+       
+                <a-entity id="roulette" animation="property: rotation; to: 0 0 -360; loop: true; dur: 2000; easing: linear">
+                    
+                 
+                    <a-cylinder color="#ef4444" radius="0.52" height="0.04" rotation="90 0 0"></a-cylinder>
+                    <a-cylinder color="#ffffff" radius="0.48" height="0.05" rotation="90 0 0"></a-cylinder>
+                    
+                 
+                    <a-text value="500" color="#111827" align="center" position="0 0.32 0.03" scale="0.6 0.6 0.6"></a-text>
+                    <a-text value="15%" color="#111827" align="center" position="0.32 0 0.03" rotation="0 0 -90" scale="0.6 0.6 0.6"></a-text>
+                    <a-text value="5%" color="#111827" align="center" position="0 -0.32 0.03" rotation="0 0 -180" scale="0.6 0.6 0.6"></a-text>
+                    <a-text value="20%" color="#111827" align="center" position="-0.32 0 0.03" rotation="0 0 90" scale="0.6 0.6 0.6"></a-text>
+                    
+                 
+                    <a-cylinder color="#111827" radius="0.08" height="0.08" rotation="90 0 0"></a-cylinder>
+
+                </a-entity>
+            </a-entity>
+            
         </a-entity>
-    </a-entity>
-
-</a-entity>
     </a-scene>   
 
     <!-- Пользовательский интерфейс -->
