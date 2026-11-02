@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея </title>
+    <title>Галерея</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
-
 
     <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
@@ -31,18 +28,14 @@
         </div>
     </header>
 
-
     <section class="py-16 lg:py-24 px-6 lg:px-24 flex-grow">
         <div class="max-w-7xl mx-auto">
             
-
             <h1 class="text-4xl lg:text-5xl font-extrabold mb-16 text-center uppercase text-white tracking-wide">
                Наши <span class="text-red-500">мероприятия</span> 
             </h1>
             
-            
             <div class="flex flex-col lg:flex-row gap-12 items-center mb-24">
-                
                 <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-[28rem] relative group">
                     <video src="img/video.mov" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay loop muted playsinline></video>
                 </div>
@@ -75,9 +68,8 @@
             </div>
 
             <div class="flex flex-col lg:flex-row-reverse gap-12 items-center mb-24">
-                
                 <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-[28rem] relative group">
-                    <video src="img/birthday.mp4" autoplay loop muted playsinline style="max-width: 100%;"></video>
+                    <video src="img/birthday.mp4" class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline></video>
                 </div>
 
                 <div class="lg:w-1/2">
@@ -111,7 +103,7 @@
         </div>
     </section>
 
-<footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
+    <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
         <p>© 2026 Другие Миры</p>
     </footer>
 
