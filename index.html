@@ -10,7 +10,6 @@
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
 
-    <!-- ВЕРХНЕЕ МЕНЮ -->
     <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
@@ -24,7 +23,6 @@
                 <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
                 <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
                 <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
-                <!-- <a href="events.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Ближайшие мероприятия</a>-->  
             </nav>
             <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase tracking-wide transition-all duration-300 text-sm red-glow">
                 Забронировать
@@ -76,7 +74,6 @@
         </div>
     </main>
 
-    <!--Что такое VR арена -->
     <section class="py-16 lg:py-24 px-6 lg:px-24 bg-[#1e2126]">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
             <div class="md:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-96">
@@ -96,10 +93,10 @@
                 <a href="arenas.html" class="inline-block border-2 border-red-500 text-red-500 hover:bg-red-600 hover:text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300">
                     Посмотреть арены
                 </a>
-                 <button onclick="location.href='ar-promo.html'" 
-        style="display: block; margin: 20px auto; padding: 15px 40px; font-size: 20px; font-weight: 900; text-transform: uppercase; color: white; background-color: #ef4444; border: 3px solid white; border-radius: 50px; cursor: pointer; box-shadow: 0 0 15px rgba(239,68,68,0.6); transition: transform 0.1s;">
-    Тест 
-</button>
+
+                <button id="open-discount-modal" class="block mx-auto mt-8 py-4 px-10 text-xl font-black uppercase text-white bg-red-500 border-2 border-white rounded-full cursor-pointer shadow-[0_0_15px_rgba(239,68,68,0.6)] hover:scale-105 transition-transform duration-200">
+                    Получить скидку
+                </button>
             </div>
         </div>
     </section>
@@ -107,6 +104,42 @@
     <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
         <p>© 2026 Другие Миры</p>
     </footer>
+
+    <div id="discount-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#1e2126] border-2 border-red-600 rounded-3xl p-8 max-w-md w-full relative shadow-[0_0_50px_rgba(239,68,68,0.4)] transform scale-95 transition-transform duration-300" id="modal-content">
+            
+            <button id="close-modal" class="absolute top-5 right-5 text-gray-400 hover:text-red-500 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <h2 class="text-3xl font-black text-white mb-8 uppercase text-center tracking-wide">Как получить <span class="text-red-500">скидку?</span></h2>
+            
+            <ol class="text-gray-300 space-y-5 mb-10 font-medium text-lg">
+                <li class="flex items-start gap-4">
+                    <span class="bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-0.5">1</span>
+                    <span>Нажми кнопку <strong>«Сканировать»</strong> ниже.</span>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-0.5">2</span>
+                    <span>Разреши доступ к камере телефона.</span>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-0.5">3</span>
+                    <span>Наведи камеру на наш логотип у кассы. Это можно сделать на всех адресах</span>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 mt-0.5">4</span>
+                    <span>Выстрели в рулетку и забери свой промокод!</span>
+                </li>
+            </ol>
+            
+            <a href="ar-promo.html" class="block w-full text-center bg-red-600 hover:bg-red-500 text-white font-bold py-4 px-8 rounded-xl uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(239,68,68,0.5)]">
+                Сканировать
+            </a>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -124,7 +157,32 @@
                 }, 4000); 
             }
         });
+
+        const modal = document.getElementById('discount-modal');
+        const modalContent = document.getElementById('modal-content');
+        const openBtn = document.getElementById('open-discount-modal');
+        const closeBtn = document.getElementById('close-modal');
+
+        openBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
     </script>
-  
 </body>
 </html>
