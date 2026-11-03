@@ -10,21 +10,36 @@
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/90 backdrop-blur-md border-b border-red-900/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
-        <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
-        <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
-        </a>
-            <nav class="hidden md:flex gap-8">
-                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
-                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
-                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
-                <a href="galery.html" class="text-red-500 font-bold transition-colors">Галерея</a>
-                <a href="contacts.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Контакты</a>
-                <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
-                <a href="faq.html" class="text-red-500 font-bold transition-colors">Вопросы</a>
+            
+            <!-- Логотип -->
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2 relative z-[60]">
+                <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
+            </a>
+            
+            <!-- Кнопка бургер -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-red-500 focus:outline-none relative z-[60]">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <nav id="mobile-menu" class="fixed inset-0 bg-[#1e2126]/95 backdrop-blur-lg flex-col items-center justify-center gap-8 hidden md:flex md:relative md:inset-auto md:bg-transparent md:flex-row md:gap-8 md:backdrop-blur-none z-50 h-screen md:h-auto">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Арены</a>
+                <a href="galery.html" class="text-red-500 text-xl md:text-base font-bold transition-colors">Галерея</a>
+                <a href="contacts.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Контакты</a>
+                <a href="prices.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Цены</a>
+                <a href="faq.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Вопросы</a>
+                
+                <!-- Кнопка брони внутри мобильного меню -->
+                <a href="contacts.html" class="md:hidden bg-red-600 hover:bg-red-500 text-white font-bold py-4 px-12 rounded-xl uppercase text-lg mt-4 shadow-[0_0_15px_rgba(239,68,68,0.5)]">Бронь</a>
             </nav>
-            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase text-sm red-glow">Бронь</a>
+            
+            <!-- Кнопка брони для десктопа -->
+            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase text-sm shadow-[0_0_15px_rgba(239,68,68,0.5)] relative z-[60]">Бронь</a>
         </div>
     </header>
 
@@ -36,7 +51,7 @@
             </h1>
             
             <div class="flex flex-col lg:flex-row gap-12 items-center mb-24">
-                <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-[28rem] relative group">
+                <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 h-72 lg:h-[28rem] relative group">
                     <video src="img/video.mov" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay loop muted playsinline></video>
                 </div>
 
@@ -68,7 +83,7 @@
             </div>
 
             <div class="flex flex-col lg:flex-row-reverse gap-12 items-center mb-24">
-                <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 border-glow h-72 lg:h-[28rem] relative group">
+                <div class="lg:w-1/2 w-full rounded-3xl overflow-hidden border border-red-500/50 h-72 lg:h-[28rem] relative group">
                     <video src="img/birthday.mp4" class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline></video>
                 </div>
 
@@ -79,18 +94,20 @@
                     <p class="text-blue-100 text-lg leading-relaxed mb-8">
                         Соберите компанию и устройте настоящий киберспортивный турнир! Переговаривайтесь по связи, прикрывайте друг другу спины и докажите, что ваша команда — лучшая.
                     </p>
-                    <a href="games.html" class="inline-block bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300 red-glow">
+                    <a href="games.html" class="inline-block bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-8 rounded-xl uppercase tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(239,68,68,0.5)]">
                         Смотреть игры
                     </a>
                 </div>
             </div>
 
-            <div class="w-full bg-[#0a1128] border border-red-800/60 rounded-3xl p-10 lg:p-14 text-center">
+            <div class="w-full bg-[#15171a] border border-red-800/60 rounded-3xl p-10 lg:p-14 text-center">
                 <h3 class="text-2xl lg:text-3xl font-bold mb-6 uppercase text-white tracking-wide">
                     Любой формат <span class="text-red-500">мероприятий</span>
                 </h3>
                 <p class="text-blue-100 text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-                    Помимо дней рождения и встреч с друзьями, наши арены идеально подходят для проведения <strong>корпоративов, масштабных тимбилдингов и выпускных</strong>. Мы поможем сделать ваш праздник по-настоящему особенным!
+                    Помимо дней рождения и встреч с друзьями, наши арены идеально подходят для проведения 
+                    <!-- ССЫЛКА НА КОРПОРАТИВЫ -->
+                    <strong><a href="corporate.html" class="text-red-500 underline decoration-red-500 decoration-2 underline-offset-4 hover:text-red-400 transition-colors">корпоративов</a>, масштабных тимбилдингов и выпускных</strong>. Мы поможем сделать ваш праздник по-настоящему особенным!
                 </p>
                 <a href="contacts.html" class="inline-flex items-center gap-2 text-red-500 hover:text-red-300 font-bold uppercase tracking-wider transition-colors duration-300">
                     Узнать подробности
@@ -107,5 +124,27 @@
         <p>© 2026 Другие Миры</p>
     </footer>
 
+    <!-- СКРИПТ УПРАВЛЕНИЯ МОБИЛЬНЫМ МЕНЮ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+                
+                // Переключаем иконку (гамбургер / крестик) и блокируем прокрутку сайта
+                if (menu.classList.contains('hidden')) {
+                    icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Гамбургер
+                    document.body.style.overflow = 'auto'; // Разрешаем скролл
+                } else {
+                    icon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Крестик
+                    document.body.style.overflow = 'hidden'; // Запрещаем скролл сайта под меню
+                }
+            });
+        });
+    </script>
 </body>
 </html>

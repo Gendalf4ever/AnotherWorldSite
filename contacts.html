@@ -10,21 +10,32 @@
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden pt-20 bg-[#1e2126]">
 
-    <!-- шапка -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/80 backdrop-blur-md border-b border-red-900/50">
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2126]/90 backdrop-blur-md border-b border-red-900/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-24 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2">
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity py-2 relative z-[60]">
                 <img src="img/logo.png" alt="Другие Миры" class="h-16 lg:h-20 w-auto object-contain">
             </a>
-            <nav class="hidden md:flex gap-8">
-                <a href="index.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Главная</a>
-                <a href="games.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Игры</a>
-                <a href="arenas.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Арены</a>
-                <a href="contacts.html" class="text-red-500 font-bold transition-colors">Контакты</a>
-                <a href="galery.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Галерея</a>
-                      <a href="prices.html" class="text-blue-100 hover:text-red-500 font-medium transition-colors">Цены</a>
+            
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-red-500 focus:outline-none relative z-[60]">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <nav id="mobile-menu" class="fixed inset-0 bg-[#1e2126]/95 backdrop-blur-lg flex-col items-center justify-center gap-8 hidden md:flex md:relative md:inset-auto md:bg-transparent md:flex-row md:gap-8 md:backdrop-blur-none z-50 h-screen md:h-auto">
+                <a href="index.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Главная</a>
+                <a href="games.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Игры</a>
+                <a href="arenas.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Арены</a>
+                <a href="contacts.html" class="text-red-500 text-xl md:text-base font-bold transition-colors">Контакты</a>
+                <a href="galery.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Галерея</a>
+                <a href="prices.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Цены</a>
+                <a href="faq.html" class="text-blue-100 hover:text-red-500 text-xl md:text-base font-medium transition-colors">Вопросы</a>
+                
+                <button onclick="openModal(); closeMobileMenu();" class="md:hidden bg-red-600 hover:bg-red-500 text-white font-bold py-4 px-12 rounded-xl uppercase text-lg mt-4 shadow-[0_0_15px_rgba(239,68,68,0.5)]">Бронь</button>
             </nav>
-            <a href="contacts.html" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase text-sm red-glow transition-all">Бронь</a>
+            <button onclick="openModal()" class="hidden md:block bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-lg uppercase tracking-wide transition-all duration-300 text-sm red-glow relative z-[60]">
+                Бронь
+            </button>
         </div>
     </header>
 
@@ -103,8 +114,8 @@
     <footer class="py-10 mt-auto px-6 bg-[#15171a] border-t border-red-900/30 text-center text-blue-100/50">
         <p>© 2026 Другие Миры</p>
     </footer>
-    <!-- Оверлей модального окна -->
-    <div id="arenaModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center" onclick="handleOutsideClick(event)">
+
+    <div id="arenaModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center opacity-0 invisible transition-all duration-300" onclick="handleOutsideClick(event)">
         <!-- Карточка модалки -->
         <div class="bg-[#0a1128] border border-red-900/50 w-full max-w-md m-4 p-8 rounded-3xl shadow-2xl transform translate-y-8 transition-transform duration-300 relative" onclick="event.stopPropagation()">
             
@@ -145,7 +156,6 @@
                 </div>
             </div>
 
-            <!-- форма заявки -->
             <div id="stepBookingForm" style="display: none;">
                 <div class="flex justify-between items-center mb-6">
                     <h3 id="selectedArenaTitle" class="text-lg font-bold text-white uppercase tracking-wide leading-tight">Оформление брони</h3>
@@ -182,7 +192,37 @@
         </div>
     </div>
 
-    <!-- Подключение скриптов -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+                
+                if (menu.classList.contains('hidden')) {
+                    icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); 
+                    document.body.style.overflow = 'auto'; 
+                } else {
+                    icon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); 
+                    document.body.style.overflow = 'hidden'; 
+                }
+            });
+        });
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if(!menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
        (function(){

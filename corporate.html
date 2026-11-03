@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Корпоратив - Другие Миры</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden bg-[#1e2126]">
+
+    <!-- КРЕСТИК ДЛЯ ВОЗВРАТА НАЗАД -->
+    <a href="javascript:history.back()" class="fixed top-6 right-6 lg:top-8 lg:right-10 z-50 bg-[#15171a]/80 border border-red-900/50 text-gray-400 hover:text-red-500 hover:border-red-500 p-3 rounded-full backdrop-blur-md transition-all shadow-[0_0_15px_rgba(239,68,68,0.2)] hover:shadow-[0_0_20px_rgba(239,68,68,0.6)]">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </a>
+
+    <main class="hero-bg flex-grow relative pb-20 pt-16 lg:pt-24 px-6 lg:px-24 min-h-screen flex flex-col justify-center">
+        
+        <div class="max-w-7xl mx-auto w-full">
+            
+            <div class="max-w-2xl mt-8">
+                <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 uppercase text-white">
+                    Корпоратив <br> на новом уровне!
+                </h1>
+                <p class="text-lg lg:text-xl text-blue-100 mb-10 max-w-lg leading-relaxed font-medium">
+                    Сразитесь плечом к плечу в VR-шутере со свободным перемещением. Банкетные зоны, масштабные локации и море адреналина!
+                </p>
+                <button id="openModalBtn" class="bg-red-600 hover:bg-red-500 text-white font-bold py-4 px-10 rounded-xl uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(239,68,68,0.5)] transform hover:-translate-y-1">
+                    Рассчитать стоимость
+                </button>
+            </div>
+
+            <div class="hidden lg:flex absolute left-0 top-[45%] items-center opacity-70">
+                <div class="w-32 h-px bg-red-600"></div>
+                <div class="w-16 h-px bg-red-600 transform rotate-45 origin-left"></div>
+            </div>
+
+            <div class="mt-20 lg:mt-32 flex flex-col lg:flex-row gap-12 lg:items-end justify-between">
+                
+                <div class="lg:w-[55%]">
+                    <h2 class="text-2xl lg:text-3xl font-bold mb-8 uppercase text-white tracking-wide">
+                        Почему наш клуб — то, <br> что стоит попробовать?
+                    </h2>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="bg-[#15171a] border border-red-900/60 rounded-2xl p-6 flex-1 hover:border-red-500 transition-colors duration-300 group cursor-default">
+                            <div class="text-red-500 mb-4 transform group-hover:scale-110 transition-transform duration-300"> 
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm font-semibold text-blue-50 uppercase tracking-wide">Free Roam<br><span class="text-xs font-normal text-red-200/70 lowercase tracking-normal">(свободное перемещение)</span></p>
+                        </div>
+
+                        <div class="bg-[#15171a] border border-red-900/60 rounded-2xl p-6 flex-1 hover:border-red-500 transition-colors duration-300 group cursor-default">
+                            <div class="text-red-500 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm font-semibold text-blue-50 uppercase tracking-wide">Полное<br>погружение</p>
+                        </div>
+
+                        <div class="bg-[#15171a] border border-red-900/60 rounded-2xl p-6 flex-1 hover:border-red-500 transition-colors duration-300 group cursor-default">
+                            <div class="text-red-500 mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm font-semibold text-blue-50 uppercase tracking-wide">Не требует<br>навыков</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-[40%] flex gap-4 justify-end">
+                    <div class="w-1/2 rounded-3xl overflow-hidden border border-red-500/50 h-64 lg:h-80 relative shadow-[0_0_15px_rgba(239,68,68,0.2)]">
+                        <!-- Здесь можно подставить ваши картинки -->
+                        <img src="img/vr-arena.webp" alt="Арена" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-1/2 rounded-3xl overflow-hidden border border-red-500/50 h-64 lg:h-80 relative mt-8 shadow-[0_0_15px_rgba(239,68,68,0.2)]">
+                        <img src="img/zone.webp" alt="Отдых" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="py-20 lg:py-32 px-6 lg:px-24 bg-[#15171a]">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12 overflow-hidden">
+            
+            <div class="w-full max-w-4xl">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 uppercase text-white tracking-wide">
+                    Окунитесь в <span class="text-red-500">Другие Миры</span>
+                </h2>
+                <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                    Это не просто игра, это проверка вашей команды на прочность. 
+                    Разделитесь на отряды и отправляйтесь в бой. 
+                    Укрывайтесь за реальными препятствиями, разрабатывайте тактику и действуйте сообща.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-red-900/40 p-2 rounded-full text-red-500 flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Командные сражения PvP (игрок против игрока)
+                    </li>
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-red-900/40 p-2 rounded-full text-red-500 flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Глубокое погружение без проводов
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 pb-32 lg:pb-40 px-6 lg:px-24 bg-[#15171a]">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-16 items-center">
+            <div class="lg:w-1/2">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 uppercase text-white tracking-wide">
+                    Уютная <span class="text-red-500">зона отдыха</span>
+                </h2>
+                <p class="text-blue-100 text-lg leading-relaxed mb-8">
+                    После напряженной битвы самое время расслабиться, заказать пиццу и обсудить самые яркие моменты игры!
+                </p> 
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-red-900/40 p-2 rounded-full text-red-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Вместимость зоны до 25 человек
+                    </li>
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-red-900/40 p-2 rounded-full text-red-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Можно принести свою еду и напитки 
+                    </li>
+                    <li class="flex items-center gap-4 text-blue-50 font-medium">
+                        <div class="bg-red-900/40 p-2 rounded-full text-red-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        Удобные диваны, столы и всё необходимое
+                    </li>
+                </ul>
+            </div>
+            <div class="lg:w-1/2 w-full">
+                <div class="w-full rounded-3xl overflow-hidden border border-red-500/50 h-72 lg:h-96 relative shadow-[0_0_20px_rgba(239,68,68,0.3)]">
+                    <img src="img/zone.webp" alt="Зона отдыха" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 left-4 bg-[#15171a]/80 backdrop-blur-md border border-red-800 px-6 py-3 rounded-2xl">
+                        <p class="text-red-500 font-bold uppercase text-sm tracking-wider">Идеально для корпоратива</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- МОДАЛЬНОЕ ОКНО РАСЧЕТА (Красная тема) -->
+    <div id="costModal" class="fixed inset-0 bg-black/80 z-[100] hidden flex justify-center items-center opacity-0 transition-opacity duration-300">
+        <div class="bg-[#1e2126] border border-red-800/60 rounded-3xl p-8 max-w-md w-full mx-4 relative transform scale-95 transition-transform duration-300 shadow-[0_0_40px_rgba(239,68,68,0.2)]" id="modalContent">
+        
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-red-700 hover:text-red-500 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <h3 class="text-2xl font-bold mb-6 text-white uppercase tracking-wide">Расчет стоимости</h3>
+            
+            <div class="mb-6">
+                <div class="flex justify-between text-blue-50 mb-3 font-medium">
+                    <span>Количество человек:</span>
+                    <span class="text-red-500 font-bold text-lg"><span id="peopleCount">2</span> чел.</span>
+                </div>
+                <input type="range" id="peopleSlider" min="2" max="24" value="2" class="w-full accent-red-600 cursor-pointer">
+                <div class="flex justify-between text-xs text-red-800 mt-1">
+                    <span>2</span>
+                    <span>24</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <div class="flex justify-between text-blue-50 mb-3 font-medium">
+                    <span>Время игры:</span>
+                    <span class="text-red-500 font-bold text-lg"><span id="hoursCount">1</span> ч.</span>
+                </div>
+                <input type="range" id="hoursSlider" min="1" max="12" value="1" class="w-full accent-red-600 cursor-pointer">
+                <div class="flex justify-between text-xs text-red-800 mt-1">
+                    <span>1</span>
+                    <span>12</span>
+                </div>
+            </div>
+
+            <div class="bg-[#15171a] border border-red-900/50 rounded-xl p-5 text-center relative overflow-hidden group">
+                <div class="absolute inset-0 bg-red-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <p class="text-sm text-blue-100 uppercase tracking-wider mb-2 relative z-10">Итоговая стоимость:</p>
+                <p class="text-4xl font-extrabold text-red-500 relative z-10"><span id="totalPrice">3600</span> ₽</p>
+            </div>
+            
+            <button class="w-full mt-6 bg-red-600 hover:bg-red-500 text-white font-bold py-4 rounded-xl uppercase tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+                Оставить заявку
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('costModal');
+        const modalContent = document.getElementById('modalContent');
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+        
+        const peopleSlider = document.getElementById('peopleSlider');
+        const hoursSlider = document.getElementById('hoursSlider');
+        const peopleCount = document.getElementById('peopleCount');
+        const hoursCount = document.getElementById('hoursCount');
+        const totalPrice = document.getElementById('totalPrice');
+
+        const pricePerPerson = 1800; // Можете поменять цену под ваш прайс
+
+        function calculatePrice() {
+            const people = parseInt(peopleSlider.value);
+            const hours = parseInt(hoursSlider.value);
+            const total = people * hours * pricePerPerson; 
+            
+            peopleCount.textContent = people;
+            hoursCount.textContent = hours;
+            totalPrice.textContent = total.toLocaleString('ru-RU');
+        }
+
+        openBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+        });
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300); 
+        }
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal(); 
+        });
+
+        peopleSlider.addEventListener('input', calculatePrice);
+        hoursSlider.addEventListener('input', calculatePrice);
+        calculatePrice();
+    </script>
+</body>
+</html>
