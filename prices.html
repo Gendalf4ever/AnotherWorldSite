@@ -269,7 +269,7 @@
 
     <!-- Оверлей модального окна бронирования -->
     <div id="arenaModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center opacity-0 invisible transition-all duration-300" onclick="handleOutsideClick(event)">
-        <div class="bg-[#0a1128] border border-blue-900/50 w-full max-w-md m-4 p-8 rounded-3xl shadow-2xl transform translate-y-8 transition-transform duration-300 relative" onclick="event.stopPropagation()">
+        <div class="bg-[#0a1128] border border-red-900/50 w-full max-w-md m-4 p-8 rounded-3xl shadow-2xl transform translate-y-8 transition-transform duration-300 relative" onclick="event.stopPropagation()">
             
             <div id="stepSelectArena">
                 <div class="flex justify-between items-center mb-6">
@@ -278,21 +278,21 @@
                 </div>
 
                 <div class="flex flex-col gap-3">
-                    <div onclick="selectArena('ТРЦ Пик (ул. Ефимова, 2)')" class="p-4 bg-[#1e2126] border border-blue-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                    <div onclick="selectArena('ТРЦ Пик (ул. Ефимова, 2)')" class="p-4 bg-[#1e2126] border border-red-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
                         <div>
                             <span class="block font-bold text-white">ТРЦ Пик</span>
                             <span class="block text-sm text-gray-400">м. Сенная / Садовая</span>
                         </div>
                         <span class="text-gray-500 group-hover:text-red-500 transform group-hover:translate-x-1 transition-all">→</span>
                     </div>
-                    <div onclick="selectArena('ТЦ Июнь (пр. Индустриальный, 24)')" class="p-4 bg-[#1e2126] border border-blue-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                    <div onclick="selectArena('ТЦ Июнь (пр. Индустриальный, 24)')" class="p-4 bg-[#1e2126] border border-red-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
                         <div>
                             <span class="block font-bold text-white">ТЦ Июнь</span>
                             <span class="block text-sm text-gray-400">м. Ладожская</span>
                         </div>
                         <span class="text-gray-500 group-hover:text-red-500 transform group-hover:translate-x-1 transition-all">→</span>
                     </div>
-                    <div onclick="selectArena('ТЦ Прометей (пр. Просвещения, 80 к1)')" class="p-4 bg-[#1e2126] border border-blue-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
+                    <div onclick="selectArena('ТЦ Прометей (пр. Просвещения, 80 к1)')" class="p-4 bg-[#1e2126] border border-red-900/50 rounded-xl cursor-pointer hover:border-red-500 hover:bg-[#15171a] transition-all group flex justify-between items-center">
                         <div>
                             <span class="block font-bold text-white">ТЦ Прометей</span>
                             <span class="block text-sm text-gray-400">м. Гражданский пр.</span>
@@ -311,19 +311,19 @@
                 <form id="bookingForm" onsubmit="submitBooking(event)" class="flex flex-col gap-4">
                     <div class="flex flex-col gap-1">
                         <label class="text-sm font-medium text-gray-400">Ваше имя</label>
-                        <input type="text" id="clientName" required placeholder="Иван" class="p-3 bg-[#1e2126] border border-blue-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                        <input type="text" id="clientName" required placeholder="Иван" class="p-3 bg-[#1e2126] border border-red-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
                     </div>
                     <div class="flex flex-col gap-1">
                         <label class="text-sm font-medium text-gray-400">Телефон</label>
-                        <input type="tel" id="clientPhone" required placeholder="+7 (999) 000-00-00" maxlength="18" class="p-3 bg-[#1e2126] border border-blue-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                        <input type="tel" id="clientPhone" required placeholder="+7 (999) 000-00-00" maxlength="18" class="p-3 bg-[#1e2126] border border-red-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
                     </div>
                     <div class="flex flex-col gap-1">
                         <label class="text-sm font-medium text-gray-400">Email (для подтверждения)</label>
-                        <input type="email" id="clientEmail" required placeholder="example@mail.ru" class="p-3 bg-[#1e2126] border border-blue-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
+                        <input type="email" id="clientEmail" required placeholder="example@mail.ru" class="p-3 bg-[#1e2126] border border-red-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors">
                     </div>
                     <div class="flex flex-col gap-1">
                         <label class="text-sm font-medium text-gray-400">Желаемая игра (необязательно)</label>
-                        <select id="clientGame" class="p-3 bg-[#1e2126] border border-blue-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors appearance-none">
+                        <select id="clientGame" class="p-3 bg-[#1e2126] border border-red-900/50 rounded-xl text-white outline-none focus:border-red-500 transition-colors appearance-none">
                             <option value="">Не выбрано (выберем на месте)</option>
                             <option value="KERNEL">KERNEL (VR-шутер)</option>
                             <option value="Шмутер">Шмутер (Low-Poly VR-шутер)</option>
